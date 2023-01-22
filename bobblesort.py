@@ -23,7 +23,7 @@ pygame.display.set_caption('Bobble Sort')
 screen = pygame.display.set_mode([500, 50])
 looping = True
 
-# Desenha os quadrados com cores, ainda
+# Desenha os retângulos com cores, ainda
 # não ordenados.
 screen.fill((255, 255, 255))
 i = 0
@@ -44,7 +44,7 @@ while looping:
 				aux = numbers[j]
 				numbers[j] = numbers[j + 1]
 				numbers[j + 1] = aux
-			# Redesenha os quadrados.
+			# Redesenha os retângulos.
 			i = 0
 			for x in range(0, 500, 500 // n):
 				pygame.draw.rect(screen, colors[numbers[i]], pygame.Rect(x, 0, 500 // n, height))
